@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Royale Digital — Creative that stops the scroll and closes the sale</title>
+<meta name="description" content="A direct-response creative studio. Paid social, landing pages, video, and email lifecycle — the whole funnel, built and owned by one team.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 58 42'%3E%3Cpolygon points='16,16 22,22 16,28 10,22' fill='%2316171C'/%3E%3Cpolygon points='42,16 48,22 42,28 36,22' fill='%2316171C'/%3E%3Cpolygon points='29,7 37,17 29,27 21,17' fill='%232C5BFF'/%3E%3Crect x='12' y='31' width='34' height='5' rx='2' fill='%2316171C'/%3E%3C/svg%3E">
+
+<!-- ============================================================
+     EL ROYALE DIGITAL · Loud editorial · diamond-crown
+     SWAP-IN SLOTS marked with  SWAP:  comments. Search "SWAP:".
+     Fill: feed cards (posts/reels) · trusted-by logos ·
+     case visuals + metrics · testimonial · contact.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#FBFAF6; --ink:#16171C; --soft:#5C5D64; --muted:#8A887E; --line:#E4E2D9; --line-soft:#EFEDE5; --panel:#F1EFE8;
+    --blue:#2C5BFF; --blue-ink:#1E47D6;
+    --mint-bg:#E3F7EE; --sky-bg:#E2F0FF; --butter-bg:#FFF2D2; --coral-bg:#FFE9E1; --violet-bg:#ECE9FF;
+    --disp:"Bricolage Grotesque",system-ui,sans-serif; --sans:"Hanken Grotesk",system-ui,sans-serif; --mono:"Space Mono",ui-monospace,monospace;
+    --maxw:1180px; --pad:clamp(20px,5vw,56px); --pill:999px;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection{ background:var(--blue); color:#fff; }
+  a{ color:inherit; text-decoration:none; } img{ max-width:100%; display:block; }
+  .wrap{ max-width:var(--maxw); margin:0 auto; padding-inline:var(--pad); }
+  .eyebrow{ font-family:var(--mono); font-size:12px; letter-spacing:.14em; text-transform:lowercase; color:var(--muted); margin:0 0 16px; }
+  .c{ color:var(--blue); }
+
+  /* NAV */
+  header.nav{ position:sticky; top:0; z-index:50; background:rgba(251,250,246,.85); backdrop-filter:saturate(140%) blur(14px); border-bottom:1px solid var(--line-soft); }
+  .nav-inner{ max-width:var(--maxw); margin:0 auto; padding:15px var(--pad); display:flex; align-items:center; justify-content:space-between; gap:24px; }
+  .mark{ display:flex; align-items:center; gap:9px; font-size:18px; color:var(--ink); }
+  .mark svg{ display:block; }
+  .mark .r{ color:var(--blue); }
+  .nav-links{ display:flex; align-items:center; gap:28px; }
+  .nav-links a{ font-size:14px; color:var(--soft); transition:color .2s; }
+  .nav-links a:hover{ color:var(--ink); }
+  .btn{ font-family:var(--sans); font-weight:600; font-size:14px; padding:11px 22px; border-radius:var(--pill); border:1.5px solid var(--ink); color:var(--ink); background:transparent; cursor:pointer; white-space:nowrap; display:inline-block; transition:transform .15s,background .2s,color .2s,border-color .2s; }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn.solid{ background:var(--blue); border-color:var(--blue); color:#fff; }
+  .btn.solid:hover{ background:var(--blue-ink); border-color:var(--blue-ink); }
+  .btn.lg{ padding:14px 28px; font-size:15px; }
+  .nav .nav-links a.menu-cta{ display:none; }
+
+  /* HERO */
+  .hero{ padding:clamp(44px,7vw,92px) 0 clamp(30px,4vw,48px); }
+  .hero h1{ font-family:var(--disp); font-weight:600; font-size:clamp(36px,7vw,76px); line-height:1.0; letter-spacing:-.03em; margin:0; max-width:15ch; }
+  .hero p.lede{ font-size:clamp(17px,2vw,20px); color:var(--soft); max-width:50ch; margin:24px 0 0; }
+  .hero-cta{ display:flex; gap:12px; flex-wrap:wrap; margin-top:34px; }
+
+  /* FEED MARQUEE (kept) */
+  .feed{ padding:clamp(20px,3vw,36px) 0 clamp(40px,6vw,72px); overflow:hidden; -webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent); }
+  .feed-track{ display:flex; gap:20px; width:max-content; animation:scroll-x 64s linear infinite; padding-inline:20px; }
+  .feed:hover .feed-track{ animation-play-state:paused; }
+  @keyframes scroll-x{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .post{ width:296px; flex:0 0 auto; background:#fff; border-radius:20px; box-shadow:0 14px 40px rgba(23,24,28,.07),0 3px 10px rgba(23,24,28,.04); overflow:hidden; }
+  .post-head{ display:flex; align-items:center; gap:10px; padding:14px 16px; }
+  .av{ width:34px; height:34px; border-radius:50%; flex:0 0 auto; background:conic-gradient(from 150deg,var(--blue),#6C5CE7,#2C7BE5); }
+  .post-head .h b{ font-size:14px; font-weight:700; display:block; line-height:1.2; } .post-head .h span{ font-size:12px; color:var(--muted); }
+  .post-head .dots{ margin-left:auto; color:var(--muted); }
+  .post-media{ aspect-ratio:1; display:grid; place-items:center; }
+  .post-actions{ display:flex; align-items:center; gap:16px; padding:12px 16px 4px; font-size:18px; }
+  .post-actions .like{ color:#FF5A35; } .post-actions .save{ margin-left:auto; }
+  .post-meta{ padding:2px 16px 16px; }
+  .post-meta .likes{ font-size:13px; font-weight:700; } .post-meta .cap{ font-size:13px; color:var(--muted); margin-top:4px; } .post-meta .cap b{ color:var(--ink); font-weight:700; }
+  .reel{ width:226px; flex:0 0 auto; aspect-ratio:9/16; border-radius:20px; box-shadow:0 14px 40px rgba(23,24,28,.07),0 3px 10px rgba(23,24,28,.04); position:relative; overflow:hidden; display:grid; place-items:center; }
+  .reel .play{ width:56px; height:56px; border-radius:50%; background:#fff; display:grid; place-items:center; color:var(--ink); box-shadow:0 8px 24px rgba(0,0,0,.16); }
+  .reel .play svg{ width:22px; height:22px; margin-left:3px; }
+  .reel .views{ position:absolute; left:14px; bottom:14px; font-family:var(--mono); font-size:12px; font-weight:700; color:var(--soft); }
+  .reel .badge{ position:absolute; right:12px; top:12px; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; background:rgba(22,23,28,.42); color:#fff; padding:4px 9px; border-radius:var(--pill); }
+  .t-coral{ background:var(--coral-bg); } .t-mint{ background:var(--mint-bg); } .t-violet{ background:var(--violet-bg); } .t-butter{ background:var(--butter-bg); } .t-sky{ background:var(--sky-bg); }
+  .slot-note{ font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); text-align:center; line-height:1.6; padding:14px; }
+  .slot-note b{ display:block; color:var(--soft); font-size:11px; margin-bottom:3px; }
+
+  /* SECTION SCAFFOLD */
+  section.block{ padding:clamp(44px,6.5vw,84px) 0; border-top:1px solid var(--line-soft); }
+  .head h2{ font-family:var(--disp); font-weight:600; font-size:clamp(28px,4.6vw,48px); line-height:1.04; letter-spacing:-.025em; margin:0; max-width:18ch; }
+  .head.center{ text-align:center; } .head.center h2{ margin-inline:auto; }
+  .head p{ color:var(--soft); font-size:clamp(16px,1.9vw,18px); margin:18px 0 0; max-width:54ch; }
+  .head.center p{ margin-inline:auto; }
+  .head{ margin-bottom:clamp(30px,4vw,48px); }
+
+  /* TRUSTED BY */
+  .trust{ text-align:center; }
+  .trust .big{ font-family:var(--disp); font-weight:600; font-size:clamp(22px,3.6vw,36px); line-height:1.12; letter-spacing:-.02em; margin:0 auto; max-width:20ch; }
+  .roster{ display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:clamp(16px,3vw,32px) clamp(24px,4.5vw,50px); margin-top:clamp(28px,4vw,44px); }
+  .roster span{ font-size:clamp(15px,2.1vw,20px); font-weight:500; color:#8A8A90; }
+
+  .roster .lg{ color:#8A8A90; display:inline-flex; align-items:center; opacity:.92; transition:color .2s,opacity .2s; }
+  .roster .lg:hover{ color:#16171C; opacity:1; }
+  .roster span{ display:inline-flex; align-items:center; }
+
+
+  /* HOW IT WORKS */
+  .steps{ display:flex; gap:clamp(20px,3vw,40px); flex-wrap:wrap; }
+  .step{ flex:1 1 200px; }
+  .step .num{ font-family:var(--disp); font-weight:600; font-size:36px; color:var(--blue); }
+  .step h3{ font-family:var(--disp); font-weight:600; font-size:20px; letter-spacing:-.01em; margin:10px 0 8px; }
+  .step p{ color:var(--soft); font-size:15px; margin:0; }
+
+  /* SERVICES (editorial list) */
+  .svc-row{ border-top:1px solid var(--line); padding:20px 0; display:flex; gap:20px; align-items:baseline; flex-wrap:wrap; }
+  .svc-row:last-child{ border-bottom:1px solid var(--line); }
+  .svc-row .n{ font-family:var(--mono); font-size:12px; color:var(--blue); width:34px; flex:0 0 auto; }
+  .svc-row .name{ flex:1 1 180px; min-width:160px; font-family:var(--disp); font-weight:600; font-size:clamp(19px,2.6vw,27px); letter-spacing:-.01em; }
+  .svc-row .desc{ flex:2 1 240px; font-size:14px; color:var(--muted); }
+
+  /* CASE STUDIES */
+  .case{ display:flex; gap:clamp(24px,5vw,56px); flex-wrap:wrap; align-items:center; padding-block:clamp(28px,4vw,44px); }
+  .case+.case{ border-top:1px solid var(--line); }
+  .case .stage{ flex:1 1 280px; display:flex; justify-content:center; }
+  .case .copy{ flex:1 1 280px; }
+  .case .k{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
+  .case .copy h3{ font-family:var(--disp); font-weight:600; font-size:clamp(21px,2.8vw,30px); line-height:1.08; letter-spacing:-.015em; margin:12px 0 0; }
+  .case .copy>p{ color:var(--soft); font-size:15px; margin:14px 0 0; max-width:42ch; }
+  .metrics{ display:flex; gap:clamp(24px,3vw,40px); margin-top:24px; flex-wrap:wrap; }
+  .metric .n{ font-family:var(--disp); font-weight:600; font-size:clamp(32px,4vw,46px); line-height:1; letter-spacing:-.02em; }
+  .metric .n small{ color:var(--blue); font-size:.5em; }
+  .metric .l{ font-family:var(--mono); font-size:10px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-top:9px; max-width:15ch; }
+  .more{ display:inline-block; margin-top:24px; font-weight:600; font-size:14px; color:var(--blue); }
+  .more:hover{ color:var(--blue-ink); }
+
+  /* light device frames */
+  .browser{ width:100%; max-width:440px; background:#fff; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 14px 40px rgba(23,24,28,.08); }
+  .browser-bar{ display:flex; align-items:center; gap:7px; padding:11px 14px; background:var(--panel); border-bottom:1px solid var(--line); }
+  .browser-bar i{ width:10px; height:10px; border-radius:50%; background:#D8D6CD; }
+  .browser-bar .url{ margin-left:8px; flex:1; background:#fff; border:1px solid var(--line); border-radius:7px; padding:5px 12px; font-family:var(--mono); font-size:11px; color:var(--muted); }
+  .browser .b-slot{ aspect-ratio:16/11; display:grid; place-items:center; }
+  .phone{ width:clamp(190px,64%,240px); aspect-ratio:9/19.5; background:#fff; border:9px solid var(--ink); border-radius:34px; position:relative; box-shadow:0 14px 40px rgba(23,24,28,.1); overflow:hidden; }
+  .phone::before{ content:""; position:absolute; top:9px; left:50%; transform:translateX(-50%); width:54px; height:5px; border-radius:3px; background:var(--ink); z-index:5; }
+  .phone .ph-slot{ position:absolute; inset:0; display:grid; place-items:center; }
+  .phone .play2{ width:54px; height:54px; border-radius:50%; background:#fff; display:grid; place-items:center; color:var(--ink); box-shadow:0 8px 24px rgba(0,0,0,.18); z-index:3; }
+  .phone .play2 svg{ width:20px; height:20px; margin-left:3px; }
+
+  /* TESTIMONIAL */
+  .quote{ text-align:center; }
+  .quote p{ font-family:var(--disp); font-weight:500; font-size:clamp(22px,3.6vw,36px); line-height:1.28; letter-spacing:-.015em; margin:0 auto; max-width:24ch; }
+  .quote .who{ font-family:var(--mono); font-size:12px; letter-spacing:.08em; color:var(--muted); margin-top:24px; }
+
+  /* FAQ */
+  .faq{ max-width:760px; margin:0 auto; }
+  details{ border-top:1px solid var(--line); }
+  details:last-child{ border-bottom:1px solid var(--line); }
+  summary{ list-style:none; cursor:pointer; padding:22px 44px 22px 0; position:relative; font-family:var(--disp); font-weight:600; font-size:clamp(17px,2vw,21px); letter-spacing:-.01em; }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{ content:"+"; position:absolute; right:6px; top:22px; font-family:var(--mono); font-size:20px; color:var(--blue); transition:transform .25s; }
+  details[open] summary::after{ transform:rotate(45deg); }
+  details p{ margin:0 0 24px; color:var(--soft); font-size:16px; line-height:1.65; max-width:64ch; }
+
+  /* CTA */
+  .cta{ text-align:center; }
+  .cta h2{ font-family:var(--disp); font-weight:600; font-size:clamp(32px,5.6vw,62px); line-height:1.0; letter-spacing:-.03em; margin:0 auto; max-width:14ch; }
+  .cta p{ color:var(--soft); font-size:clamp(16px,2vw,19px); max-width:46ch; margin:20px auto 0; }
+  .cta .row{ display:flex; gap:12px; justify-content:center; margin-top:32px; flex-wrap:wrap; }
+  .cta .desk{ font-family:var(--mono); font-size:13px; color:var(--muted); margin-top:24px; } .cta .desk a{ color:var(--blue); }
+
+  /* FOOTER */
+  footer{ border-top:1px solid var(--line); padding:28px 0; background:var(--panel); }
+  .foot-inner{ display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+  .foot-links{ display:flex; gap:22px; flex-wrap:wrap; } .foot-links a{ font-size:14px; color:var(--soft); } .foot-links a:hover{ color:var(--ink); }
+  .foot-fine{ font-family:var(--mono); font-size:11px; color:var(--muted); }
+
+
+  /* MEET THE TEAM */
+  .team-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(18px,2.5vw,28px); }
+  .member .photo{ aspect-ratio:4/5; border-radius:16px; background:var(--panel); border:1.5px dashed var(--line); overflow:hidden; display:grid; place-items:center; filter:grayscale(1); transition:filter .3s; }
+  .member:hover .photo{ filter:grayscale(0); }
+  .member .photo img{ width:100%; height:100%; object-fit:cover; }
+  .member h3{ font-family:var(--disp); font-weight:600; font-size:19px; letter-spacing:-.01em; margin:16px 0 3px; }
+  .member .role{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--blue); }
+  .member .bio{ font-size:14px; color:var(--soft); margin-top:10px; line-height:1.5; }
+  @media (max-width:780px){ .team-grid{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:460px){ .team-grid{ grid-template-columns:1fr; } }
+
+
+  /* HOW WE PRICE */
+  .price-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:stretch; }
+  .tier{ background:#fff; border:1px solid var(--line); border-radius:20px; padding:clamp(26px,3vw,34px); display:flex; flex-direction:column; }
+  .tier.feat{ border:1.5px solid var(--blue); }
+  .tier .tag{ font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--blue); margin-bottom:14px; min-height:14px; }
+  .tier h3{ font-family:var(--disp); font-weight:600; font-size:22px; letter-spacing:-.01em; margin:0; }
+  .tier .who{ font-size:14px; color:var(--muted); margin:6px 0 0; }
+  .tier .from{ font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); margin:22px 0 2px; }
+  .tier .amt{ font-family:var(--disp); font-weight:600; font-size:clamp(28px,3.4vw,38px); letter-spacing:-.02em; }
+  .tier .amt small{ font-family:var(--sans); font-weight:500; font-size:14px; color:var(--muted); }
+  .tier ul{ list-style:none; padding:0; margin:24px 0 28px; }
+  .tier li{ font-size:14px; color:#33343a; padding:7px 0; display:flex; gap:10px; align-items:flex-start; line-height:1.45; }
+  .tier li::before{ content:"\2713"; color:var(--blue); font-weight:700; flex:0 0 auto; }
+  .tier .btn{ margin-top:auto; text-align:center; }
+  .price-note{ font-size:14px; color:var(--muted); text-align:center; max-width:62ch; margin:clamp(28px,4vw,40px) auto 0; line-height:1.6; }
+  @media (max-width:820px){ .price-grid{ grid-template-columns:1fr; max-width:440px; margin-inline:auto; } }
+
+  /* REVEAL */
+  .reveal{ opacity:0; transform:translateY(20px); transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.in{ opacity:1; transform:none; }
+  :focus-visible{ outline:3px solid var(--blue); outline-offset:2px; border-radius:6px; }
+
+  @media (max-width:780px){
+    .nav-links a:not(.menu-cta){ display:none; } .nav .nav-links a.menu-cta{ display:inline-block; }
+    .case .copy{ order:1; } .case .stage{ order:2; }
+  }
+  @media (prefers-reduced-motion:reduce){ *{ animation:none !important; scroll-behavior:auto; } .reveal{ opacity:1; transform:none; transition:none; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="mark">
+      <svg width="30" height="22" viewBox="0 0 58 42" aria-hidden="true"><polygon points="16,16 22,22 16,28 10,22" fill="#16171C"/><polygon points="42,16 48,22 42,28 36,22" fill="#16171C"/><polygon points="29,7 37,17 29,27 21,17" fill="#2C5BFF"/><rect x="12" y="31" width="34" height="5" rx="2" fill="#16171C"/></svg>
+      <span>El <span class="r">Royale</span></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#contact" class="btn menu-cta">Work with us</a>
+      <a href="#contact" class="btn solid">Work with us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <p class="eyebrow reveal">direct-response creative · est. 2006</p>
+    <h1 class="reveal">Creative that stops the scroll and <span class="c">closes the sale.</span></h1>
+    <p class="lede reveal">Paid social, landing pages, video, and email lifecycle — the whole funnel, built and owned by one team.</p>
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn solid lg">Work with us</a>
+      <a href="#work" class="btn lg">See the work</a>
+    </div>
+  </div>
+</section>
+
+<!-- FEED MARQUEE (kept)  SWAP: replace each .post-media / .reel inner with <img>/<video>. -->
+<a id="work"></a>
+<div class="feed reveal">
+  <div class="feed-track">
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-coral"><div class="slot-note"><b>Drop ad</b>1080×1080</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> the hook line goes here</div></div></div>
+    <div class="reel t-violet"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-mint"><div class="slot-note"><b>Drop ad</b>1080×1350</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> a second hook line</div></div></div>
+    <div class="reel t-sky"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-butter"><div class="slot-note"><b>Drop ad</b>1080×1080</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> UGC concept</div></div></div>
+    <div class="reel t-coral"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+    <!-- duplicate set for seamless loop -->
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-coral"><div class="slot-note"><b>Drop ad</b>1080×1080</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> the hook line goes here</div></div></div>
+    <div class="reel t-violet"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-mint"><div class="slot-note"><b>Drop ad</b>1080×1350</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> a second hook line</div></div></div>
+    <div class="reel t-sky"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+    <div class="post"><div class="post-head"><div class="av"></div><div class="h"><b>client_brand</b><span>Sponsored</span></div><div class="dots">•••</div></div><div class="post-media t-butter"><div class="slot-note"><b>Drop ad</b>1080×1080</div></div><div class="post-actions"><span class="like">♥</span><span>💬</span><span>➤</span><span class="save">🔖</span></div><div class="post-meta"><div class="likes">[__] likes</div><div class="cap"><b>client_brand</b> UGC concept</div></div></div>
+    <div class="reel t-coral"><span class="badge">Reel</span><div class="play"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><span class="views">[__] views</span></div>
+  </div>
+</div>
+
+<!-- TRUSTED BY / 50+ YEARS -->
+<section class="block">
+  <div class="wrap trust reveal">
+    <p class="eyebrow" style="text-align:center;">the team</p>
+    <p class="big"><span class="c">50+ years</span> of combined experience, behind brands like:</p>
+    <!-- SWAP: replace wordmarks with official grayscale logo SVGs -->
+    <div class="roster">
+      <span class="lg" title="Fabletics"><svg style="height:17px;width:auto;display:block"  fill="currentColor" version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.2 65" style="enable-background:new 0 0 512.2 65;" xml:space="preserve"> <g> <g> <path d="M131.7,21.3h-0.4H131.7l0.2,8.9h-23.4v9.3h20.7v8.7h-20.7v16.7H99V29.1c0-4.4,3.6-7.8,7.8-7.8H131.7z"> </path> <path d="M160.8,46.6h11.4l-5.7-14.1L160.8,46.6z M162.3,21.3h9.3l18.4,43.3H180l-4-9.7h-18.4l-4,9.7h-9.7L162.3,21.3z"> </path> <path d="M213.8,29.8V39h8.9c4.2,0,7-1.5,7-4.6v-0.2c0-2.7-2.3-4.4-6.3-4.4H213.8z M231.9,51.7c0-3.2-2.1-4.9-7.2-4.9h-11v9.5h11.4 C229.4,56.3,231.9,54.9,231.9,51.7z M233.2,42c5.1,1.9,8.2,4.9,8.2,10.6v0.2c0,7.8-6.5,11.8-16.2,11.8h-20.7V29.1 c0-2.1,0.8-4.1,2.3-5.5c1.5-1.5,3.5-2.3,5.5-2.3h12.5c8.7,0,14.1,4.4,14.1,11.2v0.2C238.9,37.6,236.4,40.3,233.2,42z"> </path> <path d="M265.7,30.2v25.7h21.5v8.7h-31V29.1c0-4.3,3.5-7.8,7.8-7.8h1.7V30.2z"> </path> <path d="M311.5,47.1v9.1h23.4v8.4H302V29.1c0-4.3,3.5-7.8,7.8-7.8h24.9v8.4h-23.2v8.9H332v8.4H311.5z"> </path> <path d="M382.8,21.3h2.7v8.9h-13.1v34.4H363V30h-13.1v-0.8c0-4.3,3.5-7.8,7.8-7.8H382.8z"> </path> <path d="M400.6,29.3c0-4.4,3.6-8,7.8-8h1.7v43.3h-9.5V29.3z"> </path> <path d="M446.8,56.1c-7.2,0-12.2-5.9-12.2-13.1v-0.2c0-7.2,5.1-13.1,12.2-13.1c4.2,0,7.4,1.9,10.8,4.6l5.9-6.8 c-3.8-3.8-8.7-6.5-16.5-6.5c-12.9,0-21.7,9.7-21.7,21.7v0.2c-0.1,5.7,2.1,11.3,6.2,15.3c4.1,4.1,9.6,6.3,15.3,6.2 c8,0,12.9-3,17.1-7.4l-5.9-5.9C454.6,54.2,451.6,56.1,446.8,56.1z"> </path> <path d="M498.7,38.8c-7.4-1.9-9.1-2.7-9.1-5.5v-0.2c0-2.1,1.9-3.6,5.5-3.6s7.2,1.5,11,4.2l4.9-7c-4.2-3.4-9.5-5.3-15.6-5.3 c-8.7,0-14.8,5.1-14.8,12.7v0.2c0,8.4,5.5,10.8,13.9,12.9c7,1.7,8.4,3,8.4,5.3v0.2c0,2.5-2.3,4-6.1,4c-4.9,0-8.9-1.9-12.5-5.1 l-5.5,6.5c5.1,4.4,11.4,6.8,17.9,6.8c9.1,0,15.4-4.6,15.4-13.1v-0.4C512,44.1,507.1,41.2,498.7,38.8z"> </path> </g> <path d="M49.4,38.2c-9.5,4-26.8,3.4-30.2,4C16,42.8,8,42,2.3,53.6c1.3-1.5,3.2-2.5,5.3-2.5c3.8,0,6.8,3,6.8,6.8 c0,3.6-3,6.8-6.8,6.8c-2.7,0-5.1-1.7-6.1-4c-0.2-0.2-0.2-0.6-0.4-0.8v-0.2c0-0.2,0-0.4-0.2-0.6V58v-0.6c0-0.8,0.2-1.7,0.2-2.5v-0.2 c0.8-5.1,2.5-10.3,2.5-10.3c0.8-3,1.5-4.2,1.5-4.4c1.9-4.4,5.1-9.3,9.9-11c0,0,4-1.7,13.9-1.5H31c9.9,0.2,16.7-0.6,16.7-0.6 c7.8-0.6,12.5-2.1,16.5-4.6C63.5,24.9,60.4,33.6,49.4,38.2z M73.4,3.8c-0.6,2.1-1.9,4.9-4.2,7.2c0,0-3,4-9.9,6.8 c0,0-4.4,1.9-12.2,2.5c0,0-6.5,0.6-16.7,0.6h-2.1c-9.9,0-13.9,1.5-13.9,1.5c-4.9,1.7-8,6.5-9.9,11C4.4,33.6,2.1,39,0,49V26.4 c0-1.1,0-2.3,0.2-3.4C1.1,15.8,5.3,9.7,11.4,6.5c1.3-0.8,7.2-3.2,16.5-3.4c2.7,0,18.6-0.2,25.5-0.4C69.6,2.1,74.3,0,74.3,0 C73.9,2.5,73.4,3.8,73.4,3.8z"> </path> </g> </svg></span><span>Yitty</span><span class="lg" title="Savage X Fenty"><svg style="height:20px;width:auto;display:block"  aria-labelledby="id-2" viewBox="0 0 383 32" xmlns="http://www.w3.org/2000/svg" fill="none"><title>SavageX</title><path d="M4.27643 31.2151C2.67921 30.6962 1.25373 29.9759 0 29.0577V23.7187H0.223268C1.41517 25.4084 2.76852 26.6852 4.27643 27.5454C5.78435 28.4056 7.40218 28.8358 9.13336 28.8358C10.2978 28.8358 11.3557 28.6344 12.3106 28.235C13.2655 27.8356 14.0281 27.2484 14.5948 26.4769C15.1616 25.7054 15.4467 24.8008 15.4467 23.763C15.4467 22.7253 15.1169 21.8002 14.4609 21.0697C13.8048 20.3425 12.7434 19.653 11.2836 19.001L6.9419 17.0893C4.85349 16.1403 3.30092 14.9694 2.28763 13.5732C1.27091 12.1804 0.765979 10.6375 0.765979 8.94768C0.765979 7.25791 1.21251 5.77296 2.10902 4.4109C3.00552 3.04543 4.25582 1.97012 5.87022 1.18497C7.48118 0.399829 9.27419 0.00725555 11.2424 0.00725555C12.764 0.00725555 14.1964 0.201835 15.5394 0.584167C16.8825 0.969913 18.016 1.47514 18.9434 2.09643V7.16915H18.7201C17.8854 5.8344 16.8172 4.82737 15.5188 4.14463C14.2204 3.4619 12.8087 3.12053 11.287 3.12053C10.0917 3.12053 9.02688 3.31511 8.08572 3.70086C7.14456 4.0866 6.40606 4.64986 5.87022 5.39063C5.33438 6.13139 5.06302 7.03602 5.06302 8.1045C5.06302 9.11154 5.36873 10.0025 5.98014 10.774C6.59155 11.5455 7.61514 12.2589 9.04749 12.911L13.4338 14.9592C15.5841 15.9389 17.1882 17.0518 18.2461 18.2943C19.3041 19.5403 19.8365 21.097 19.8365 22.9677C19.8365 24.7189 19.3659 26.2755 18.4247 27.641C17.4836 29.0065 16.2024 30.0749 14.5742 30.843C12.9461 31.6145 11.1496 32.0003 9.18145 32.0003C7.50866 32.0003 5.87709 31.7408 4.27987 31.2219L4.27643 31.2151Z" fill="currentColor"/><path d="M64.9813 31.4571L56.1605 7.476C55.8308 6.55772 55.4804 5.65993 55.1094 4.78261C54.735 3.90871 54.3641 3.14405 53.9896 2.49203C53.6152 1.84002 53.2202 1.24604 52.8046 0.713507V0.535995H60.1896V0.713507C59.8599 1.24604 59.6881 1.85709 59.6744 2.53641C59.6606 3.21915 59.7568 3.96674 59.9664 4.78261C60.1759 5.59848 60.4747 6.54066 60.8629 7.60914L67.4888 25.7187H67.712L74.7844 7.476C75.2035 6.40752 75.5161 5.47559 75.7256 4.67337C75.9351 3.87116 76.0382 3.16111 76.0382 2.53641C76.0382 1.91171 75.9489 1.30749 75.7703 0.713507V0.535995H81.9496V0.713507C81.4138 1.24604 80.9501 1.84685 80.5619 2.51593C80.1738 3.1816 79.8166 3.88823 79.4868 4.629C79.1571 5.36976 78.7552 6.31877 78.2777 7.476L68.8764 31.4571H64.9813Z" fill="currentColor"/><path d="M121.056 29.9892C118.579 28.6544 116.659 26.794 115.302 24.4044C113.946 22.0182 113.265 19.2941 113.265 16.2389C113.265 13.1836 113.997 10.3434 115.46 7.89584C116.924 5.44823 118.981 3.52292 121.64 2.11307C124.295 0.703218 127.28 0 130.594 0C132.594 0 134.414 0.19458 136.056 0.576912C137.698 0.962657 139.219 1.52591 140.621 2.26668V7.51692H140.353C139.367 6.12414 138.055 5.04883 136.413 4.29099C134.771 3.53316 132.965 3.15765 130.996 3.15765C128.341 3.15765 126.05 3.72091 124.123 4.84742C122.2 5.97394 120.719 7.52375 119.692 9.49685C118.662 11.47 118.146 13.7025 118.146 16.1911C118.146 18.6796 118.631 20.8849 119.603 22.7965C120.571 24.7082 121.966 26.2136 123.79 27.3128C125.61 28.4086 127.757 28.9582 130.237 28.9582C131.402 28.9582 132.535 28.8251 133.641 28.5588C134.744 28.2926 135.908 27.8932 137.134 27.3572L135.434 29.8936V21.9739C135.434 20.8781 135.376 19.9495 135.256 19.1917C135.135 18.4339 134.936 17.7614 134.651 17.1674C134.366 16.5734 134.002 15.9965 133.555 15.4332V15.2557H141.167V15.4332C140.779 15.9965 140.487 16.5768 140.295 17.1674C140.099 17.7614 139.972 18.4202 139.913 19.1473C139.851 19.8744 139.824 20.8166 139.824 21.9739V29.047C138.33 29.9653 136.726 30.6856 135.012 31.2044C133.294 31.7233 131.481 31.9828 129.571 31.9828C126.376 31.9828 123.543 31.3171 121.066 29.9789L121.056 29.9892Z" fill="currentColor"/><path d="M169.268 31.457H148.782V31.2795C149.139 30.7743 149.431 30.211 149.655 29.5898C149.878 28.965 150.029 28.2618 150.101 27.4767C150.177 26.6915 150.214 25.7186 150.214 24.5614V7.3906C150.214 6.26408 150.177 5.29801 150.101 4.49921C150.025 3.697 149.885 2.99378 149.675 2.38614C149.466 1.77851 149.167 1.22208 148.779 0.716856V0.539345H168.68V5.7452H168.454C168.066 5.18195 167.588 4.75182 167.021 4.45483C166.455 4.15784 165.737 3.94278 164.871 3.80965C164.005 3.67652 162.903 3.60824 161.56 3.60824H154.639V14.2862H159.544C160.708 14.2862 161.683 14.2282 162.477 14.1087C163.267 13.9892 163.923 13.8117 164.445 13.5762C164.967 13.3406 165.407 13.0266 165.764 12.6408H165.987V18.9596H165.764C165.407 18.5431 164.964 18.2188 164.445 17.9798C163.923 17.7443 163.274 17.5736 162.498 17.4678C161.721 17.3654 160.753 17.3107 159.588 17.3107H154.639V28.3881H162.23C163.452 28.3881 164.49 28.313 165.342 28.1662C166.194 28.0195 166.925 27.7429 167.533 27.3435C168.141 26.9441 168.646 26.3877 169.034 25.6743H169.261V31.457H169.268Z" fill="currentColor"/><path d="M237.866 29.6581C238.075 29.0812 238.216 28.4121 238.292 27.6543C238.364 26.8964 238.405 25.9577 238.405 24.8277V7.16536C238.405 6.00812 238.367 5.05912 238.292 4.31835C238.216 3.57758 238.075 2.91533 237.866 2.33842C237.656 1.76151 237.358 1.21873 236.969 0.713507V0.535995H256.081V5.74186H255.858C255.559 5.23663 255.119 4.8304 254.535 4.51976C253.955 4.20911 253.206 3.9804 252.296 3.8302C251.386 3.68341 250.29 3.60831 249.005 3.60831H242.833V14.7301H247.751C249.51 14.7301 250.87 14.5969 251.825 14.3307C252.78 14.0644 253.481 13.6479 253.931 13.0847H254.199V19.359H253.931C253.484 18.7958 252.78 18.3861 251.825 18.1369C250.87 17.8843 249.514 17.758 247.751 17.758H242.833V24.8311C242.833 25.9884 242.871 26.9374 242.946 27.6782C243.022 28.4189 243.169 29.0812 243.393 29.6581C243.616 30.235 243.953 30.7778 244.399 31.283V31.4605H236.966V31.283C237.354 30.7778 237.653 30.2384 237.862 29.6581H237.866Z" fill="currentColor"/><path d="M293.793 29.5693C293.985 28.931 294.129 28.2209 294.219 27.4324C294.308 26.6472 294.353 25.6914 294.353 24.5615V2.27356L293.277 0.628165V0.539409H299.769L315.439 25.2305H315.663V7.39066C315.663 6.23343 315.632 5.26394 315.573 4.47538C315.515 3.69023 315.377 2.99384 315.171 2.3828C314.962 1.77516 314.663 1.21873 314.275 0.713507V0.535995H320.544V0.713507C320.186 1.21873 319.901 1.77516 319.692 2.3828C319.482 2.99043 319.334 3.69706 319.245 4.49586C319.156 5.29808 319.111 6.26073 319.111 7.38725V31.4571H314.453L298.024 5.69748H297.757V24.5615C297.757 25.688 297.801 26.6472 297.89 27.4324C297.98 28.2175 298.121 28.931 298.316 29.5693C298.509 30.2077 298.787 30.7778 299.144 31.283V31.4605H292.92V31.283C293.308 30.7778 293.597 30.2077 293.793 29.5693Z" fill="currentColor"/><path d="M335.664 29.5898C335.918 28.9651 336.083 28.2619 336.155 27.4767C336.227 26.6916 336.268 25.7187 336.268 24.5615V3.56393H333.819C332.507 3.56393 331.394 3.65268 330.484 3.8302C329.574 4.00771 328.818 4.26715 328.224 4.60851C327.626 4.94988 327.149 5.37318 326.792 5.8784H326.568V0.535995H350.362V5.87499H350.138C349.781 5.36976 349.304 4.94988 348.706 4.6051C348.108 4.26373 347.363 4.00429 346.467 3.82678C345.573 3.64927 344.467 3.56051 343.155 3.56051H340.706V24.5615C340.706 25.688 340.751 26.6541 340.84 27.4529C340.93 28.2551 341.088 28.9651 341.311 29.5898C341.534 30.2145 341.857 30.7778 342.273 31.2796V31.4571H334.661V31.2796C335.08 30.7744 335.413 30.2111 335.667 29.5898H335.664Z" fill="currentColor"/><path d="M366.255 16.4198L367.419 20.8234L359.182 7.25405C358.647 6.36308 358.114 5.51307 357.592 4.69721C357.07 3.88134 356.555 3.1474 356.046 2.49538C355.538 1.84337 355.002 1.24939 354.435 0.716856V0.539345H362.136V0.672478C362.016 1.32449 362.023 1.99357 362.161 2.67631C362.294 3.35904 362.525 4.06226 362.854 4.78937C363.184 5.51649 363.644 6.36991 364.242 7.34622L368.986 15.1772H369.164L374.045 7.3906C374.67 6.35284 375.165 5.46187 375.522 4.7211C375.879 3.98033 376.134 3.28394 376.285 2.62852C376.432 1.9765 376.481 1.33815 376.419 0.716856V0.539345H383V0.716856C382.344 1.28011 381.732 1.90482 381.166 2.58414C380.599 3.26687 380.032 4.01447 379.465 4.83034C378.899 5.64621 378.346 6.51328 377.81 7.43156L369.216 21.0009L370.603 16.2423V24.5614C370.603 25.6879 370.648 26.654 370.737 27.4528C370.827 28.255 370.985 28.9582 371.208 29.5659C371.431 30.1735 371.706 30.7436 372.036 31.2795V31.457H364.829V31.2795C365.187 30.747 365.472 30.1735 365.681 29.5659C365.891 28.9582 366.039 28.255 366.128 27.4528C366.217 26.6506 366.262 25.6879 366.262 24.5614V16.4198H366.255Z" fill="currentColor"/><path d="M284.913 31.457H264.428V31.2795C264.785 30.7743 265.077 30.211 265.3 29.5898C265.524 28.965 265.675 28.2618 265.747 27.4767C265.822 26.6915 265.86 25.7186 265.86 24.5614V7.3906C265.86 6.26408 265.822 5.29801 265.747 4.49921C265.671 3.697 265.53 2.99378 265.321 2.38614C265.111 1.77851 264.813 1.22208 264.424 0.716856V0.539345H284.326V5.7452H284.099C283.711 5.18195 283.234 4.75182 282.667 4.45483C282.1 4.15784 281.382 3.94278 280.517 3.80965C279.651 3.67652 278.549 3.60824 277.206 3.60824H270.284V14.2862H275.189C276.354 14.2862 277.329 14.2282 278.123 14.1087C278.913 13.9892 279.569 13.8117 280.091 13.5762C280.613 13.3406 281.053 13.0266 281.41 12.6408H281.633V18.9596H281.41C281.053 18.5431 280.61 18.2188 280.091 17.9798C279.569 17.7443 278.92 17.5736 278.143 17.4678C277.367 17.3654 276.398 17.3107 275.234 17.3107H270.284V28.3881H277.875C279.098 28.3881 280.136 28.313 280.987 28.1662C281.839 28.0195 282.571 27.7429 283.179 27.3435C283.79 26.9441 284.292 26.3877 284.68 25.6743H284.907V31.457H284.913Z" fill="currentColor"/><path d="M27.3004 24.6093L36.791 0.535995H40.6415L50.3107 24.384C51.6091 27.5416 52.3716 29.7229 53.804 31.2796V31.4571H46.3709V31.2796C47.2674 29.7673 46.7727 27.3641 45.653 24.5615L45.3404 23.8036H31.1028L30.7902 24.6502C29.6704 27.5416 29.2686 29.7673 30.2063 31.2796V31.4571H23.8037V31.2796C25.4146 29.7673 26.1772 27.5416 27.2969 24.6058L27.3004 24.6093ZM44.1348 20.7381L38.2267 5.96716H38.0481L32.3187 20.7381H44.1382H44.1348Z" fill="currentColor"/><path d="M83.8078 24.6093L93.2984 0.535995H97.1489L106.818 24.384C108.116 27.5416 108.879 29.7229 110.311 31.2796V31.4571H102.878V31.2796C103.775 29.7673 103.28 27.3641 102.16 24.5615L101.848 23.8036H87.6102L87.2977 24.6502C86.1779 27.5416 85.776 29.7673 86.7137 31.2796V31.4571H80.3111V31.2796C81.9221 29.7673 82.6846 27.5416 83.8044 24.6058L83.8078 24.6093ZM100.639 20.7381L94.7307 5.96716H94.5521L88.8227 20.7381H100.642H100.639Z" fill="currentColor"/><path d="M207.804 24.7423L203.057 18.2461L198.31 24.7423C196.431 27.3231 195.624 29.1904 195.624 31.3273V31.4604H188.101V31.2829C190.025 29.6375 191.594 27.5006 193.652 24.6979L200.68 14.9997L195.084 7.30184C193.023 4.49921 191.457 2.36225 189.534 0.716856V0.539345H197.101V0.672478C197.101 2.80944 197.908 4.67672 199.787 7.25746L203.053 11.7499L206.32 7.25746C208.199 4.67672 209.006 2.80944 209.006 0.672478V0.539345H216.573V0.716856C214.649 2.36225 213.08 4.49921 211.022 7.30184L205.427 14.9997L212.455 24.6979C214.515 27.5006 216.082 29.6375 218.005 31.2829V31.4604H210.483V31.3273C210.483 29.1904 209.676 27.3231 207.797 24.7423H207.804Z" fill="currentColor"/></svg></span><span class="lg" title="Living Spaces"><svg style="height:26px;width:auto;display:block"  fill="currentColor" version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 300 84.2" style="enable-background:new 0 0 300 84.2;" xml:space="preserve"> <style type="text/css"> .st0{fill:currentColor;} </style> <g> <path class="st0" d="M76.3,44.7c0.5,2.7,0.8,5.5,0.8,8.3v29.1c0,0.4-0.3,0.7-0.7,0.7h-9.5c-0.4,0-0.7-0.3-0.7-0.7c0,0,0,0,0,0V54.3 c0-1.8-0.1-3.6-0.4-5.4c-0.2-1.5-0.7-3-1.4-4.4c-0.7-1.2-1.8-2.3-3-3c-1.6-0.8-3.4-1.2-5.2-1.1c-4.3,0-7.4,1.3-9.2,3.9 S44,50.5,44,54.8v27.3c0,0.4-0.3,0.7-0.7,0.7h-9.5c-0.4,0-0.7-0.3-0.7-0.7c0,0,0,0,0,0V55.9c0-2.1-0.1-4.3-0.4-6.4 c-0.2-1.7-0.7-3.3-1.4-4.9c-0.6-1.3-1.6-2.4-2.9-3.1c-1.6-0.8-3.4-1.2-5.2-1.1c-1.6,0-3.2,0.3-4.6,0.9c-1.5,0.6-2.8,1.6-3.9,2.8 c-1.2,1.4-2.1,3.1-2.7,4.9c-0.7,2.3-1.1,4.7-1,7.1v26c0,0.4-0.3,0.7-0.7,0.7H0.7c-0.4,0-0.7-0.3-0.7-0.7c0,0,0,0,0,0v-50 c0-0.4,0.3-0.7,0.7-0.7c0,0,0,0,0,0h8.9c0.4,0,0.7,0.3,0.7,0.7l0,0v5.4c0.2-0.2,0.4-0.5,0.6-0.7c1-1.2,2.2-2.3,3.5-3.2 c1.5-1.1,3.2-1.9,5-2.5c2.1-0.7,4.2-1,6.4-1c3.4-0.1,6.8,0.7,9.8,2.4c2.4,1.5,4.4,3.6,5.8,6.1c1.6-2.6,3.8-4.7,6.5-6.1 c2.9-1.6,6.1-2.4,9.3-2.4c3.4-0.1,6.8,0.6,9.8,2c2.4,1.2,4.5,3,6.1,5.3C74.7,39.6,75.8,42,76.3,44.7z M128.3,77.9 c0.1,1.4,0.2,2.9,0.3,4.2c0,0.4-0.2,0.8-0.6,0.8c0,0,0,0,0,0h-8.5c-0.4,0-0.7-0.3-0.7-0.7c-0.2-1.9-0.2-3.8-0.3-5.7 c-1.7,2.4-4,4.3-6.7,5.6c-3.2,1.4-6.8,2.1-10.3,2.1c-2.3,0-4.6-0.3-6.9-1c-2.1-0.6-4.1-1.6-5.8-3c-1.7-1.3-3-3.1-3.9-5 c-1-2.1-1.5-4.5-1.4-6.8c-0.1-3,0.7-6,2.3-8.5c1.6-2.3,3.7-4.2,6.2-5.6c2.8-1.5,5.9-2.5,9-3c3.6-0.6,7.2-0.9,10.8-0.9h6.2V49 c0-1.2-0.2-2.4-0.7-3.5c-0.5-1.2-1.2-2.3-2.1-3.2c-1-1-2.2-1.7-3.4-2.2c-1.6-0.6-3.3-0.9-5-0.8c-1.6,0-3.1,0.2-4.6,0.5 c-1.3,0.3-2.5,0.7-3.7,1.3c-1,0.5-2,1.1-2.9,1.8l-2.7,2c-0.3,0.2-0.7,0.2-1-0.1l-5.7-5.9c-0.1-0.1-0.2-0.3-0.2-0.5 c0-0.2,0.1-0.4,0.2-0.5c2.8-2.5,6-4.5,9.6-5.7c3.5-1.2,7.1-1.9,10.8-1.9c3.3-0.1,6.6,0.4,9.7,1.4c2.5,0.8,4.8,2.1,6.8,3.8 c1.7,1.5,3.1,3.5,3.9,5.6c0.8,2.1,1.3,4.3,1.3,6.5V73C128.2,74.8,128.2,76.4,128.3,77.9L128.3,77.9z M113.5,58.8 c-2.3,0-4.6,0.1-6.8,0.4c-2.1,0.2-4.2,0.7-6.3,1.4c-1.7,0.6-3.2,1.5-4.5,2.8c-1.1,1.2-1.7,2.7-1.6,4.3c0,2.6,0.8,4.5,2.6,5.6 c2.3,1.3,4.9,1.9,7.5,1.8c2.2,0.1,4.3-0.4,6.3-1.2c1.6-0.7,3-1.9,4.2-3.2c1-1.3,1.8-2.8,2.3-4.4c0.5-1.6,0.7-3.2,0.7-4.9v-2.4 L113.5,58.8z M166.3,72.4c-0.2-0.1-0.5-0.1-0.7,0c-0.9,0.5-1.9,0.9-3,1.1c-1.1,0.2-2.2,0.3-3.4,0.3c-1.3,0.1-2.6-0.2-3.8-0.9 c-0.8-0.6-1.5-1.4-1.9-2.3c-0.4-1.1-0.7-2.3-0.7-3.4c-0.1-1.3-0.1-2.7-0.1-4.1V41h12.9c0.4,0,0.7-0.3,0.7-0.7c0,0,0,0,0,0v-8.2 c0-0.4-0.3-0.7-0.7-0.7l0,0h-12.9V18c0-0.4-0.3-0.7-0.7-0.7h-9.5c-0.4,0-0.7,0.3-0.7,0.7c0,0,0,0,0,0v13.3h-10.2 c-0.4,0-0.7,0.3-0.7,0.7v8.2c0,0.4,0.3,0.7,0.7,0.7h10.3v25.4c0,2.1,0.1,4.1,0.3,6.1c0.2,2,0.8,4,1.8,5.8c1.1,1.8,2.8,3.3,4.7,4.2 c2.8,1.2,5.8,1.8,8.8,1.6c1.4,0,2.9-0.2,4.3-0.4c1.6-0.2,3.2-0.7,4.6-1.4c0.2-0.1,0.4-0.4,0.4-0.6V73 C166.7,72.8,166.5,72.5,166.3,72.4L166.3,72.4z M186.2,45.6c1.2-1.6,2.8-2.8,4.6-3.7c2-1,4.2-1.4,6.5-1.4c2.3-0.1,4.5,0.4,6.6,1.3 c2,1,3.8,2.4,5.3,4c0.3,0.3,0.7,0.3,1,0l7.2-6.5c0.1-0.1,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-2.5-2.7-5.6-4.8-9-6.2 c-3.4-1.3-7.1-2-10.8-2c-3.8-0.1-7.5,0.6-11,2c-6.5,2.5-11.6,7.7-14,14.2c-1.3,3.5-2,7.2-1.9,10.9c0,3.7,0.6,7.4,1.9,10.9 c1.3,3.2,3.2,6.1,5.7,8.6c2.4,2.4,5.3,4.3,8.5,5.5c3.5,1.3,7.2,2,10.9,2c3.6,0,7.2-0.7,10.6-1.9c3.4-1.3,6.5-3.4,8.9-6.1 c0.3-0.3,0.3-0.7,0-1l-6.8-6.8c-0.3-0.3-0.7-0.3-1,0c-1.4,1.6-3.1,3-5.1,4c-2,1-4.3,1.4-6.5,1.3c-2.2,0-4.4-0.4-6.4-1.2 c-1.8-0.8-3.5-2-4.8-3.5c-1.4-1.5-2.4-3.3-3.1-5.2c-0.7-2-1.1-4.2-1.1-6.3c0-2.2,0.3-4.4,1-6.5C184,49,185,47.2,186.2,45.6 L186.2,45.6z M268.4,41c-0.9-2.4-2.3-4.5-4.1-6.2c-1.7-1.6-3.8-2.8-6.1-3.6c-2.3-0.8-4.7-1.1-7.2-1.1c-3.7-0.1-7.3,0.8-10.6,2.6 c-2.1,1.1-4,2.8-5.4,4.7V2.3c0-0.4-0.3-0.7-0.7-0.7h-9.5c-0.4,0-0.7,0.3-0.7,0.7c0,0,0,0,0,0v79.8c0,0.4,0.3,0.7,0.7,0.7h9.5 c0.4,0,0.7-0.3,0.7-0.7c0,0,0,0,0,0V56.4c-0.1-2.5,0.3-4.9,1-7.3c0.6-1.8,1.5-3.5,2.8-4.9c1.1-1.3,2.6-2.2,4.2-2.8 c1.7-0.6,3.4-0.9,5.2-0.9c1.4,0,2.7,0.2,4,0.6c1.3,0.4,2.4,1.1,3.4,2c1.1,1.1,1.9,2.4,2.4,3.8c0.6,1.8,0.9,3.8,0.9,5.7v29.6 c0,0.4,0.3,0.7,0.7,0.7h9.5c0.4,0,0.7-0.3,0.7-0.7c0,0,0,0,0,0V49.9C270,46.9,269.5,43.9,268.4,41z M280.4,36 c0.4,0,0.8-0.2,1.1-0.4c3.7-2.5,7.2-5.2,10.5-8.1c4-3.7,8-8.9,8-15.9c0.1-6.3-4.9-11.5-11.2-11.6c-5.6,0-8.4,4.8-8.4,4.8h-0.1 c0,0-2.8-4.8-8.4-4.8c-6.3,0.1-11.3,5.3-11.2,11.6c0,7,4.1,12.2,8,15.9c3.3,2.9,6.9,5.7,10.5,8.1C279.5,35.9,280,36,280.4,36 L280.4,36z"> </path> </g> </svg></span><span>Fridays</span><span class="lg" title="Transamerica"><svg style="height:20px;width:auto;display:block"  viewBox="0 0 147 26" fill="none" xmlns="http://www.w3.org/2000/svg"> <title>Transamerica</title> <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0428 3.75204L13.5814 5.02033L12.4452 0.132114L12.1282 0V24.8638L23.2257 20.8212L17.0428 3.75204ZM16.9107 21.8252L15.0875 13.0793L16.9107 13.6342V21.8252ZM8.98375 26L9.40652 25.8415L11.0183 11.8374L8.98375 11.2032V26ZM5.62806 25.4187L0 9.96139L9.59147 6.47358L8.58741 11.2033L6.6057 11.811V20.7155L5.62806 25.4187Z" fill="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M31.6021 20.7156C31.6021 20.7949 31.6814 20.8741 31.7607 20.8741H33.8745C33.9538 20.8741 34.033 20.7949 34.033 20.7156L33.9273 14.3213L34.0066 9.53875H37.653C37.7322 9.53875 37.8115 9.45948 37.8115 9.38021V7.87411C37.8115 7.79484 37.7322 7.71558 37.653 7.71558H28.0086C27.9294 7.71558 27.8501 7.79484 27.8501 7.87411V9.38021C27.8501 9.45948 27.9294 9.53875 28.0086 9.53875H31.655L31.7078 14.3213L31.6021 20.7156ZM36.7809 20.7156C36.7809 20.7948 36.8602 20.8741 36.9395 20.8741V20.8213H38.9212C39.0005 20.8213 39.0797 20.742 39.0797 20.6627L39.0533 16.1444C39.1326 13.9513 40.5858 12.8944 42.409 12.8944H42.409C42.5675 12.8944 42.7261 12.8944 42.8582 12.9209C42.9374 12.9209 43.0167 12.868 43.0167 12.7887V11.3355C43.0167 11.2562 42.9374 11.1769 42.8582 11.1505C42.782 11.1505 42.7058 11.1444 42.6266 11.1381C42.5411 11.1312 42.4522 11.1241 42.3561 11.1241C40.9822 11.1241 39.7139 11.7318 39.0005 12.8944L39.0533 11.3619C39.0533 11.2826 38.974 11.2034 38.8948 11.2034H36.9395C36.8602 11.2034 36.7809 11.2826 36.7809 11.3619L36.8338 15.9859L36.7809 20.7156ZM50.1509 20.8741C50.0716 20.8741 49.9923 20.7949 49.9923 20.7156L50.0188 19.5266C49.3582 20.4778 48.3541 21.0327 47.0594 21.0327C44.3907 21.0327 42.9903 18.866 42.9903 16.0652C42.9903 13.2644 44.5228 11.0184 47.1123 11.0184C48.3805 11.0184 49.3846 11.4941 50.0452 12.4453L49.9923 11.3619C49.9923 11.2827 50.0716 11.2034 50.1509 11.2034H52.1326C52.2119 11.2034 52.2911 11.2827 52.2911 11.3619L52.2383 16.0123L52.2911 20.7156C52.2911 20.7949 52.2119 20.8741 52.1326 20.8741H50.1509ZM47.6936 19.4737C49.1997 19.4737 50.098 18.364 50.098 16.118C50.098 13.8721 49.2525 12.6567 47.7464 12.6302C46.1082 12.6038 45.2891 13.8721 45.2891 15.9331C45.2891 18.179 46.1082 19.4737 47.6936 19.4737ZM53.6652 20.7156C53.6652 20.7949 53.7445 20.8741 53.8237 20.8741H55.8055C55.8847 20.8741 55.964 20.7949 55.964 20.7156L55.9376 16.7786V15.7217C56.1225 13.7135 57.2059 12.7623 58.3156 12.7623C59.3461 12.7623 60.0859 13.4757 60.0859 14.8497V16.7257L60.0595 20.6627C60.0595 20.742 60.1388 20.8213 60.2181 20.8213H62.1998C62.279 20.8213 62.3583 20.742 62.3583 20.6627L62.3319 16.7257V14.744C62.3319 12.3131 61.0372 10.9656 59.029 10.9656C57.5758 10.9656 56.466 11.7054 55.8583 12.6038L55.9111 11.3619C55.9111 11.2826 55.8319 11.2034 55.7526 11.2034H53.8502C53.7709 11.2034 53.6916 11.2826 53.6916 11.3619L53.718 16.3294L53.6652 20.7156ZM67.9069 21.1119C65.1854 21.1119 63.4943 19.9758 63.415 17.7563C63.415 17.677 63.4943 17.5977 63.5736 17.5977H65.476C65.5553 17.5977 65.6346 17.677 65.6346 17.7563C65.6874 19.0245 66.5065 19.6058 68.039 19.6058C69.3073 19.6058 70.0736 19.1038 70.0736 18.2054C70.0736 17.2989 68.9263 17.1176 67.6037 16.9087C65.8038 16.6244 63.6793 16.2888 63.6793 14.0042C63.6793 12.0489 65.2382 11.0184 67.6955 11.0184C70.1 11.0184 71.7646 12.0225 71.8968 14.0306C71.8968 14.1099 71.8175 14.1892 71.7382 14.1892H69.9415C69.8622 14.1892 69.7829 14.1363 69.7829 14.0306C69.6244 13.0266 68.911 12.4717 67.6427 12.4717C66.5329 12.4717 65.8195 12.8945 65.8195 13.8193C65.8195 14.6887 66.929 14.8522 68.2236 15.043C70.037 15.3102 72.2138 15.6309 72.2138 18.0205C72.1874 19.9758 70.3642 21.1119 67.9069 21.1119ZM80.088 20.7156C80.088 20.7949 80.1673 20.8741 80.2465 20.8741H82.2282C82.3075 20.8741 82.3868 20.7949 82.3868 20.7156L82.3339 16.0123L82.3868 11.3619C82.3868 11.2827 82.3075 11.2034 82.2282 11.2034H80.2465C80.1673 11.2034 80.088 11.2827 80.088 11.3619L80.1408 12.4453C79.4803 11.4941 78.4762 11.0184 77.2079 11.0184C74.6185 11.0184 73.086 13.2644 73.086 16.0652C73.086 18.866 74.4864 21.0327 77.1551 21.0327C78.4498 21.0327 79.4539 20.4778 80.1144 19.5266L80.088 20.7156ZM80.1673 16.118C80.1673 18.364 79.2689 19.4737 77.7628 19.4737C76.2038 19.4737 75.3583 18.179 75.3583 15.9331C75.3583 13.8721 76.1774 12.6038 77.8156 12.6302C79.3217 12.6567 80.1673 13.8721 80.1673 16.118ZM86.0331 17.2806L86.0859 20.7156C86.0859 20.7948 86.0066 20.8741 85.9274 20.8741H83.8928C83.8136 20.8741 83.7343 20.7948 83.7343 20.7156L83.7871 17.2806L83.7607 11.3883C83.7607 11.3091 83.84 11.2298 83.9192 11.2298H85.8217C85.901 11.2298 85.9802 11.3091 85.9802 11.3883L85.9274 12.6302C86.5615 11.6526 87.4599 10.992 88.8075 10.992C90.155 10.992 91.1327 11.5997 91.5819 12.8944C92.3481 11.5204 93.2993 10.992 94.5676 10.992C96.4701 10.992 97.6062 12.181 97.6062 14.7704V17.2542L97.6591 20.6892C97.6591 20.7684 97.5798 20.8477 97.5006 20.8477H95.4924C95.4132 20.8477 95.3339 20.7684 95.3339 20.6892L95.3603 17.2542V14.8497C95.3603 13.3965 94.7526 12.7623 93.8014 12.7623C92.9294 12.7623 92.1103 13.6607 91.8197 15.2989V17.2806L91.8461 20.7156C91.8461 20.7948 91.7668 20.8741 91.6875 20.8741H89.6794C89.6001 20.8741 89.5209 20.7948 89.5209 20.7156L89.5737 17.2806V14.8497C89.5737 13.3965 88.966 12.7623 88.0148 12.7623C87.0636 12.7623 86.1652 13.8192 85.9802 15.7217V17.2806H86.0331ZM107.911 17.7298C107.937 17.6505 107.858 17.5713 107.779 17.5713H105.903C105.824 17.5713 105.744 17.6241 105.718 17.7298C105.454 18.9188 104.687 19.5001 103.498 19.5001C101.86 19.5001 101.041 18.5225 100.935 16.4615H107.964C108.043 16.4615 108.122 16.3822 108.122 16.303C108.07 13.0265 106.379 10.992 103.393 10.992C100.46 10.992 98.6895 13.0265 98.6895 16.0652C98.6895 18.9981 100.354 21.0855 103.472 21.0855C106.061 21.0855 107.647 19.5794 107.911 17.7298ZM101.015 14.9554C101.279 13.3965 102.072 12.5774 103.419 12.5774C104.899 12.5774 105.612 13.7135 105.692 14.9554H101.015ZM109.338 20.8741C109.259 20.8741 109.179 20.7948 109.179 20.7156L109.232 15.9859L109.179 11.3619C109.179 11.2826 109.259 11.2034 109.338 11.2034H111.293C111.372 11.2034 111.452 11.2826 111.452 11.3619L111.399 12.8944C112.112 11.7318 113.381 11.1241 114.755 11.1241C114.851 11.1241 114.94 11.1312 115.025 11.1381C115.104 11.1444 115.18 11.1505 115.257 11.1505C115.336 11.1769 115.415 11.2562 115.415 11.3355V12.7887C115.415 12.868 115.336 12.9209 115.257 12.9209C115.125 12.8944 114.966 12.8944 114.807 12.8944C112.984 12.8944 111.531 13.9513 111.452 16.1444L111.478 20.6627C111.478 20.742 111.399 20.8213 111.32 20.8213H109.338V20.8741ZM116.34 10.0936C116.34 10.1729 116.419 10.2522 116.499 10.2522H118.48C118.56 10.2522 118.639 10.1729 118.639 10.0936V8.16478C118.639 8.08551 118.56 8.00625 118.48 8.00625H116.499C116.419 8.00625 116.34 8.08551 116.34 8.16478V10.0936ZM116.34 20.7156C116.34 20.7949 116.419 20.8741 116.499 20.8741H118.507C118.586 20.8741 118.665 20.7949 118.665 20.7156L118.612 15.9859L118.665 11.3884C118.665 11.3091 118.586 11.2298 118.507 11.2298H116.499C116.419 11.2298 116.34 11.3091 116.34 11.3884L116.367 15.9859L116.34 20.7156ZM124.584 21.1119C121.598 21.1119 119.854 19.1567 119.854 16.0916C119.854 13.053 121.572 11.0184 124.61 11.0184C127.041 11.0184 128.574 12.3924 128.785 14.4798C128.812 14.5591 128.732 14.6384 128.653 14.6384H126.883C126.804 14.6384 126.724 14.5855 126.724 14.4798C126.513 13.238 125.694 12.6302 124.637 12.6302C122.972 12.6302 122.18 13.8193 122.18 16.0652C122.18 18.3904 122.972 19.5002 124.637 19.5002C125.852 19.5266 126.698 18.7339 126.804 17.3599C126.83 17.2542 126.909 17.2014 126.962 17.2014H128.785C128.864 17.2014 128.944 17.2806 128.917 17.3599C128.759 19.5266 127.094 21.1119 124.584 21.1119ZM136.765 20.7156C136.765 20.7949 136.844 20.8741 136.923 20.8741H138.905C138.984 20.8741 139.064 20.7949 139.064 20.7156L139.011 16.0123L139.064 11.3619C139.064 11.2827 138.984 11.2034 138.905 11.2034H136.923C136.844 11.2034 136.765 11.2827 136.765 11.3619L136.818 12.4453C136.157 11.4941 135.153 11.0184 133.885 11.0184C131.295 11.0184 129.763 13.2644 129.763 16.0652C129.763 18.866 131.163 21.0327 133.832 21.0327C135.127 21.0327 136.131 20.4778 136.791 19.5266L136.765 20.7156ZM136.871 16.118C136.871 18.364 135.972 19.4737 134.466 19.4737C132.881 19.4737 132.062 18.179 132.062 15.9331C132.062 13.8721 132.881 12.6038 134.519 12.6302C136.025 12.6567 136.871 13.8721 136.871 16.118Z" fill="currentColor"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M141.388 10.5164C141.414 10.7806 141.52 10.9656 141.705 11.0977C141.89 11.2298 142.128 11.2826 142.392 11.3355C142.709 11.3355 142.947 11.2562 143.132 11.1241C143.317 10.992 143.396 10.7806 143.396 10.5428C143.396 10.3843 143.343 10.2521 143.264 10.1465C143.184 10.0408 143.079 9.98792 142.947 9.93508C142.897 9.92524 142.845 9.91174 142.788 9.89731C142.693 9.87297 142.587 9.84597 142.471 9.82938C142.313 9.80296 142.207 9.77654 142.128 9.75012C142.072 9.73169 142.017 9.70042 141.971 9.67422C141.951 9.66284 141.932 9.65242 141.916 9.64443C141.863 9.618 141.837 9.56516 141.837 9.48589C141.837 9.3802 141.89 9.30093 141.969 9.24808C142.075 9.19524 142.18 9.16881 142.312 9.16881C142.471 9.16881 142.603 9.19524 142.682 9.24808C142.762 9.30093 142.815 9.3802 142.841 9.48589C142.841 9.53873 142.867 9.53873 142.894 9.53873H143.317C143.343 9.53873 143.369 9.51231 143.369 9.48589C143.343 9.2745 143.237 9.08955 143.052 8.98386C142.867 8.87816 142.656 8.82532 142.365 8.82532C142.075 8.82532 141.837 8.87816 141.678 9.01028C141.52 9.14239 141.441 9.30093 141.441 9.53873C141.441 9.72369 141.493 9.82938 141.573 9.93508C141.652 10.0408 141.758 10.12 141.89 10.1465C141.939 10.1563 141.992 10.1698 142.048 10.1842C142.144 10.2086 142.249 10.2356 142.365 10.2521C142.524 10.2786 142.63 10.305 142.709 10.3314L142.709 10.3314C142.788 10.3578 142.867 10.3843 142.92 10.4371C142.973 10.49 142.999 10.5428 142.999 10.6221C142.999 10.7542 142.947 10.8335 142.867 10.8863C142.788 10.9391 142.656 10.9656 142.497 10.9656C142.286 10.9656 142.154 10.9391 142.075 10.8599C141.995 10.7806 141.943 10.6749 141.916 10.5428C141.916 10.5164 141.89 10.49 141.863 10.49H141.441H141.441C141.414 10.49 141.388 10.49 141.388 10.5164ZM143.792 10.0408L143.766 11.177C143.766 11.2298 143.792 11.2298 143.845 11.2298H144.189C144.215 11.2298 144.241 11.2034 144.241 11.177V10.4107L144.215 9.40663L144.876 11.177C144.876 11.2034 144.902 11.2034 144.928 11.2034H145.219C145.245 11.2034 145.272 11.2034 145.272 11.177L145.88 9.45947L145.853 10.4107V11.177C145.853 11.2034 145.88 11.2298 145.906 11.2298H146.302C146.329 11.2298 146.355 11.2034 146.355 11.177L146.329 10.0408L146.355 8.87817C146.355 8.85175 146.329 8.82532 146.302 8.82532H145.774C145.747 8.82532 145.721 8.82532 145.721 8.85175L145.087 10.6221L144.426 8.85175C144.426 8.82532 144.4 8.82532 144.373 8.82532H143.819C143.792 8.82532 143.766 8.85175 143.766 8.87817L143.792 10.0408Z" fill="currentColor"></path> </svg></span><span class="lg" title="Match.com"><svg style="height:15px;width:auto;display:block"  fill="currentColor" version="1.1" id="Layer_1" xmlns:x="ns_extend;" xmlns:i="ns_ai;" xmlns:graph="ns_graphs;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 792.6 65" style="enable-background:new 0 0 792.6 65;" xml:space="preserve"> <style type="text/css"> .st0{fill:currentColor;} </style> <g> <polygon class="st0" points="0,0.7 9.9,0.7 9.9,55.5 39.2,55.5 39.2,64.2 0,64.2 "> </polygon> <rect x="65.1" y="0.7" class="st0" width="9.8" height="63.4"> </rect> <path class="st0" d="M99.5,0.7H110l14.3,34c1.9,4.2,3.8,11.3,3.8,11.3s1.8-7,3.7-11.3l14.1-34h9.6l-27,64.1h-1.2L99.5,0.7z"> </path> <rect x="180.2" y="0.7" class="st0" width="9.8" height="63.4"> </rect> <path class="st0" d="M237.7,27.1c-2.5-2.7-6-7.1-6-7.1s0.7,5.2,0.7,9.1v35h-9.1V0.1h1.3l35,37.6c2.4,2.6,5.9,7.1,5.9,7.1 s-0.7-5.6-0.7-9.1V0.7h9.1v64.1h-1.2L237.7,27.1z"> </path> <path class="st0" d="M298.5,32.5c0-18.9,13.7-32.5,32.5-32.5c9.7,0,17.3,2.7,22.5,8.5l-6.6,6.6c-3.6-3.8-8.3-6.2-15.9-6.2 c-13.2,0-22.5,10.1-22.5,23.6c0,13.5,9.3,23.7,23.8,23.7c6.4,0,12-1.7,15.6-4.1V40.2h-17.1v-8.6H357v25.3 c-4.1,3.7-12.9,8.1-24.6,8.1C312.5,65,298.5,51.4,298.5,32.5"> </path> <path class="st0" d="M419.8,51.9l8.1-4.5c3,4.9,6.8,8.9,14.5,8.9c6.4,0,11-3.5,11-8.7c0-5.5-3.7-7.9-10.6-11l-4.2-1.9 c-9.2-4.1-14.8-8.8-14.8-18.6c0-9.4,7.3-16.1,17.8-16.1c8.4,0,14.1,3.2,17.9,10l-7.7,4.8c-2.4-4.2-5.2-6.2-10.2-6.2 c-5,0-8.2,3.1-8.2,7.4c0,4.8,2.7,6.9,9.1,9.7l4.1,1.9c10.8,4.8,16.6,9.8,16.6,20c0,11.1-8.7,17.5-20.6,17.5 C430.6,65,423.3,59,419.8,51.9"> </path> <path class="st0" d="M507.3,33c8.6,0,13.3-3.8,13.3-11.8c0-8.1-4.8-11.8-13.3-11.8h-10.2V33H507.3z M487.2,0.7h20.4 c13.2,0,23,6.5,23,20.4c0,13.8-9.8,20.5-23,20.5h-10.5v22.5h-9.9V0.7z"> </path> <path class="st0" d="M578.8,44.4l-6.9-17.3c-1.4-3.5-3.1-8.9-3.2-9.3c-0.1,0.3-1.6,5.7-3.1,9.3l-6.9,17.3H578.8z M568.3,0.1h1.1 l27.8,64.1H587l-4.7-11.6h-26.9l-4.7,11.6h-9.5L568.3,0.1z"> </path> <path class="st0" d="M609.5,32.5C609.5,13.5,624,0,642,0c11.4,0,19.8,4.2,25.4,12.6l-7.6,5.4c-3.5-5.5-9.5-9.1-17.8-9.1 c-13.2,0-22.5,10.1-22.5,23.6c0,13.5,9.3,23.7,22.5,23.7c8.8,0,14.6-3.9,18.7-10l7.6,5.3C662.8,59.9,653.9,65,642,65 C624,65,609.5,51.4,609.5,32.5"> </path> <polygon class="st0" points="689.8,0.7 730,0.7 730,9.4 699.6,9.4 699.6,28.1 726.6,28.1 726.6,36.6 699.6,36.6 699.6,55.5 731.4,55.5 731.4,64.2 689.8,64.2 "> </polygon> <path class="st0" d="M749.2,51.9l8.1-4.5c3,4.9,6.8,8.9,14.5,8.9c6.4,0,11-3.5,11-8.7c0-5.5-3.7-7.9-10.6-11l-4.2-1.9 c-9.2-4.1-14.8-8.8-14.8-18.6C753.2,6.7,760.4,0,771,0c8.4,0,14.1,3.2,17.9,10l-7.7,4.8c-2.4-4.2-5.2-6.2-10.2-6.2 c-5,0-8.2,3.1-8.2,7.4c0,4.8,2.7,6.9,9.1,9.7l4.1,1.9c10.8,4.8,16.6,9.8,16.6,20c0,11.1-8.7,17.5-20.6,17.5 C760,65,752.7,59,749.2,51.9"> </path> </g> </svg></span><span>DINE LA</span><span>Ghirardelli</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="block">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">how it works</p><h2>One team owns the <span class="c">whole path.</span></h2></div>
+    <div class="steps reveal">
+      <div class="step"><div class="num">01</div><h3>The ad</h3><p>A scroll-stopper earns the click — the right hook, the right promise.</p></div>
+      <div class="step"><div class="num">02</div><h3>The page</h3><p>The landing page keeps the promise and closes — zero friction, one action.</p></div>
+      <div class="step"><div class="num">03</div><h3>The inbox</h3><p>Lifecycle email runs the follow-up — cart, welcome, win-back, repeat.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">what we run</p><h2>Every lever, <span class="c">under one roof.</span></h2></div>
+    <div class="reveal">
+      <div class="svc-row"><span class="n">01</span><span class="name">Paid social</span><span class="desc">Static · carousel · UGC direction · hook testing · Meta · TikTok</span></div>
+      <div class="svc-row"><span class="n">02</span><span class="name">Landing pages</span><span class="desc">Advertorials · funnel design · CRO · A/B testing · build + deploy</span></div>
+      <div class="svc-row"><span class="n">03</span><span class="name">Video &amp; motion</span><span class="desc">Short-form · motion graphics · reels · TikTok · animated ads</span></div>
+      <div class="svc-row"><span class="n">04</span><span class="name">Email &amp; lifecycle</span><span class="desc">Flows · campaigns · segmentation · retention · dynamic content</span></div>
+      <div class="svc-row"><span class="n">05</span><span class="name">Strategy</span><span class="desc">Offer design · funnel audits · conversion tracking · naming · GTM</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section class="block" id="cases">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">case studies</p><h2>The work, and what it <span class="c">moved.</span></h2><p>Swap in real clients and numbers — until then, these show the shape.</p></div>
+
+    <div class="case reveal">
+      <div class="stage">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><div class="url">clientbrand.com/offer</div></div>
+          <!-- SWAP: landing page screenshot -->
+          <div class="b-slot t-sky"><div class="slot-note"><b>Drop landing page</b>1440 wide · scaled</div></div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="k">Client · Landing Pages + CRO</div>
+        <h3>Turned a leaking page into the main channel.</h3>
+        <p>One line on the problem, one on what you did, one on the result. Let the numbers carry it.</p>
+        <div class="metrics"><div class="metric"><div class="n">[__]<small>%</small></div><div class="l">Higher conversion rate</div></div><div class="metric"><div class="n">[__]<small>×</small></div><div class="l">Return on ad spend</div></div></div>
+        <a href="#" class="more">Explore case study →</a>
+      </div>
+    </div>
+
+    <div class="case reveal">
+      <div class="stage">
+        <div class="phone"><div class="ph-slot t-coral"><div class="play2"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div><div class="slot-note" style="position:absolute;bottom:34px;left:0;right:0;"><b>Drop video reel</b>9:16 · .mp4</div></div></div>
+      </div>
+      <div class="copy">
+        <div class="k">Client · Video + Paid Social</div>
+        <h3>Hooks that scaled spend without raising CAC.</h3>
+        <p>What was stuck, what you shipped, what happened — one tight paragraph.</p>
+        <div class="metrics"><div class="metric"><div class="n">[__]<small>×</small></div><div class="l">Ad spend scaled</div></div><div class="metric"><div class="n">[__]<small>%</small></div><div class="l">Lower CPA</div></div></div>
+        <a href="#" class="more">Explore case study →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE PRICE -->
+<section class="block" id="pricing">
+  <div class="wrap">
+    <div class="head center reveal"><p class="eyebrow" style="text-align:center;">how we price</p><h2>Three ways to <span class="c">work together.</span></h2><p>Pricing scales with scope. Start small to test the fit, or hand us the whole funnel — every engagement begins with a scope call.</p></div>
+    <div class="price-grid reveal">
+
+      <div class="tier">
+        <div class="tag">&nbsp;</div>
+        <h3>À la carte</h3>
+        <p class="who">For one-off needs or testing the fit.</p>
+        <div class="from">starting at</div>
+        <div class="amt">$150 <small>/ asset</small></div>
+        <ul>
+          <li>Single ad creative &amp; UGC concepts</li>
+          <li>Landing pages from $1,500</li>
+          <li>Short-form video from $200</li>
+          <li>Funnel audits &amp; teardowns</li>
+          <li>No commitment</li>
+        </ul>
+        <a href="#contact" class="btn">Start a project</a>
+      </div>
+
+      <div class="tier feat">
+        <div class="tag">The flagship</div>
+        <h3>Full-funnel house</h3>
+        <p class="who">For brands that want one team to own it all.</p>
+        <div class="from">starting at</div>
+        <div class="amt">$8,000 <small>/ month</small></div>
+        <ul>
+          <li>Ads + landing pages + email lifecycle</li>
+          <li>Strategy, CRO &amp; conversion tracking</li>
+          <li>Fresh creative every week</li>
+          <li>Optional media buying</li>
+          <li>One team, one number</li>
+        </ul>
+        <a href="#contact" class="btn solid">Partner with us</a>
+      </div>
+
+      <div class="tier">
+        <div class="tag">&nbsp;</div>
+        <h3>Monthly retainer</h3>
+        <p class="who">For brands scaling one or two channels.</p>
+        <div class="from">starting at</div>
+        <div class="amt">$2,500 <small>/ month</small></div>
+        <ul>
+          <li>Up to ~15 assets per month</li>
+          <li>One or two services of your choice</li>
+          <li>Continuous testing &amp; iteration</li>
+          <li>Priority turnaround</li>
+          <li>Extra assets billed à la carte</li>
+          <li>Monthly reporting</li>
+        </ul>
+        <a href="#contact" class="btn">Talk to us</a>
+      </div>
+
+    </div>
+    <p class="price-note reveal">Final pricing depends on channels, creative volume, and whether media buying is in the mix. Ad spend and extended usage rights are billed separately. Retainers run on a 90-day initial term, 30-day notice after.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="block">
+  <div class="wrap quote reveal">
+    <!-- SWAP: real testimonial -->
+    <p>“It stopped feeling like we hired a vendor and started feeling like we added a team that owns the number.”</p>
+    <div class="who">Founder Name · <span class="c">@brandhandle</span></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">about</p><h2>One house, not a <span class="c">hallway of vendors.</span></h2><p>Most brands stitch together a creative shop, a web freelancer, and an email contractor — and the funnel leaks at every handoff. We own all of it. No secret formula, no inflated decks: results come from frequent testing, real creative strategy, and pages tuned to convert — and from one team that owns the number instead of pointing at the next vendor. Fifty-plus years of combined performance creative across DTC, retail, lifestyle, and e-commerce, with a real edge in combat sports and the SoCal fitness world.</p></div>
+  </div>
+</section>
+
+<!-- MEET THE TEAM  (SWAP: headshots, and the placeholder names/roles/bios) -->
+<section class="block" id="team">
+  <div class="wrap">
+    <div class="head reveal"><p class="eyebrow">meet the team</p><h2>The people behind <span class="c">the work.</span></h2></div>
+    <div class="team-grid reveal">
+      <div class="member">
+        <!-- SWAP: founder headshot -->
+        <div class="photo"><span class="slot-note"><b>Headshot</b>4:5</span></div>
+        <h3>Gonzalo Enriquez</h3>
+        <div class="role">Founder &amp; Creative Director</div>
+        <p class="bio">20+ years of performance creative — led design at Fabletics and ships full-funnel work for DTC, retail, and lifestyle brands.</p>
+      </div>
+      <div class="member">
+        <!-- SWAP: Michael's headshot -->
+        <div class="photo"><span class="slot-note"><b>Headshot</b>4:5</span></div>
+        <h3>Michael Meyka</h3>
+        <div class="role">Co-Founder · Everything Video</div>
+        <p class="bio">Owns everything that moves — short-form, motion, and the hooks that stop the scroll in the first second.</p>
+      </div>
+      <div class="member">
+        <div class="photo"><span class="slot-note"><b>Headshot</b>4:5</span></div>
+        <h3>Team Member</h3>
+        <div class="role">Role</div>
+        <p class="bio">One line on what they own — paid media, motion, copy, or strategy.</p>
+      </div>
+      <div class="member">
+        <div class="photo"><span class="slot-note"><b>Headshot</b>4:5</span></div>
+        <h3>Team Member</h3>
+        <div class="role">Role</div>
+        <p class="bio">One line on what they own — paid media, motion, copy, or strategy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="head center reveal"><p class="eyebrow" style="text-align:center;">questions</p><h2>The honest <span class="c">answers.</span></h2></div>
+    <div class="faq reveal">
+      <details open><summary>What makes you different from a creative shop or a media buyer?</summary><p>Most brands stitch together three vendors and the funnel leaks at every handoff. We own the ad, the page, and the follow-up, so they're built by the same people. One team, one number, no finger-pointing.</p></details>
+      <details><summary>Do you do media buying too, or just creative?</summary><p>Creative is the lever that moves performance, so it's where we start. Media buying comes in as part of the engagement when you want one team running both — built around the creative, not bolted on after.</p></details>
+      <details><summary>What kind of brands do you work best with?</summary><p>DTC brands across health and wellness, food and beverage, apparel, and fitness — with a real edge in combat sports and SoCal fitness. If you're spending on paid social and the funnel underneath isn't keeping up, that's our lane.</p></details>
+      <details><summary>What does it cost?</summary><p>It depends on scope — channels, creative volume, whether media buying is in the mix. Tell us where the funnel's leaking and we'll scope it honestly, including whether we're even the right fit.</p></details>
+      <details><summary>How fast do you move?</summary><p>Fast, because there's no agency telephone game. With everything under one roof, an idea can go from brief to live in the same week instead of bouncing between vendors for a month.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block cta" id="contact">
+  <div class="wrap">
+    <h2 class="reveal">Let's scale your <span class="c">brand.</span></h2>
+    <p class="reveal">Tell us what you're selling and where the funnel's leaking. We'll come back with exactly how we'd run the whole path — ad, page, and inbox.</p>
+    <div class="row reveal">
+      <!-- SWAP: real email + booking link -->
+      <a href="mailto:hello@elroyale.digital?subject=New%20project" class="btn solid lg">Work with us</a>
+      <a href="#" class="btn lg">Book a call</a>
+    </div>
+    <div class="desk reveal">front desk · <a href="mailto:hello@elroyale.digital">hello@elroyale.digital</a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot-inner">
+    <a href="#top" class="mark">
+      <svg width="26" height="19" viewBox="0 0 58 42" aria-hidden="true"><polygon points="16,16 22,22 16,28 10,22" fill="#16171C"/><polygon points="42,16 48,22 42,28 36,22" fill="#16171C"/><polygon points="29,7 37,17 29,27 21,17" fill="#2C5BFF"/><rect x="12" y="31" width="34" height="5" rx="2" fill="#16171C"/></svg>
+      <span style="font-size:15px;">El <span class="r">Royale</span></span>
+    </a>
+    <nav class="foot-links"><a href="#work">Work</a><a href="#services">Services</a><a href="#cases">Case Studies</a><a href="#pricing">Pricing</a><a href="#about">About</a><a href="#team">Team</a><a href="#contact">Contact</a></nav>
+    <div class="foot-fine">© <span id="yr"></span> El Royale Digital · est. 2006</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver((e)=>{ e.forEach(x=>{ if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }); }, { threshold:.1, rootMargin:'0px 0px -6% 0px' });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
